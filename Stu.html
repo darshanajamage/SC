@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Details</title>
+</head>
+<body>
+<button onclick="showdetails()">Enter Student Data</button>
+
+<script>
+class student {
+  constructor(name, age, grade) {
+    this.name = name;
+    this.age = age;
+    this.grade = grade;
+  }
+  display() {
+    console.log("Name: " + this.name);
+    console.log("Age: " + this.age);
+    console.log("Grade: " + this.grade);
+  }
+}
+
+function showdetails() {
+  let name = prompt("Enter Name:");
+  let age = prompt("Enter Age:");
+  let grade = prompt("Enter Grade:");
+
+  let s1 = new student(name, age, grade);
+  s1.display();
+}
+</script>
+</body>
+</html>
