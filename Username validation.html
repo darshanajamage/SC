@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Username Validation</title>
+</head>
+<body>
+
+    <h2>Username Validation Using Exception Handling</h2>
+
+    <label>Enter Username:</label>
+    <input type="text" id="username"><br><br>
+
+    <button onclick="checkUsername()">Submit</button>
+
+    <p id="message"></p>
+
+    <script>
+        function checkUsername() {
+            var uname = document.getElementById("username").value;
+            var msg = document.getElementById("message");
+
+            try {
+                if (uname == "") {
+                    throw "Username cannot be empty";
+                }
+                msg.innerHTML = "Username accepted";
+            }
+            catch (error) {
+                msg.innerHTML = "Error: " + error;
+            }
+        }
+    </script>
+
+</body>
+</html>
