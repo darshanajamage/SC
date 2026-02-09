@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Validation</title>
+    <script>
+        function checkImage() {
+            var file = document.getElementById("image").value;
+            var msg = document.getElementById("msg");
+
+            if (file.endsWith(".jpg") || file.endsWith(".png") || file.endsWith(".jpeg")) {
+                msg.innerHTML = "Valid Image File";
+            } else {
+                msg.innerHTML = "Invalid Image File";
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h3>Image Validation</h3>
+
+    <input type="file" id="image">
+    <br><br>
+
+    <button onclick="checkImage()">Check</button>
+
+    <p id="msg"></p>
+
+</body>
+</html>
